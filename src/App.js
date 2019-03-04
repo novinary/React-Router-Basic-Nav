@@ -6,7 +6,9 @@ import { Route } from "react-router-dom";
 const App = () => (
   <div>
     <Navigation />
-    <Route path="/" component={Home} />
+    {/* Using exact prop on the root component for / to make sure that it's
+    rendering the exact component and not all the other components. */}
+    <Route exact path="/" component={Home} />
     <Route path="/about" component={About} />
     <Route path="/contact" component={Contact} />
   </div>
